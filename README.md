@@ -1,38 +1,75 @@
-# Ecommerce App - React Native Frontend with Redux Toolkit
-Ecommerce App
+# 🛒 E-Commerce 2025 — Full Stack
 
-This project is a React Native frontend for an e-commerce app, built using Redux Toolkit for state management. It utilizes various libraries including RTK, Axios, Stripe, React Navigation, and React Native Toast, among others.
+Welcome to **E-Commerce 2025** — a modern, full-stack E-Commerce platform built with a highly optimized React + Vite frontend, featuring a dynamic admin dashboard, intuitive shopping experience, and advanced management tools for transactions, orders, users, and analytics.
 
-## Features
-Redux Toolkit (RTK): Efficient state management with simplified Redux tasks.
-Axios: Making HTTP requests to the server and handling responses.
-Stripe: Secure and seamless payment processing.
-React Navigation: Smooth transitions between screens and deep linking.
-React Native Toast: Informative and user-friendly toast notifications.
-Installation
-Clone the repository:
-  git clone 
+**🌐 Live Frontend:** [Visit Portfolio](https://ahmed-rabi3e.vercel.app/)  
+**📦 Frontend Repo:** [E-Commerce 2025 Frontend](https://github.com/Ahmed-Rabi3e/E-commerce-2025-FrontEnd)
+**📦 Backend Repo:** [E-Commerce 2025 Backend](https://github.com/Ahmed-Rabi3e/E-commerce-2025-BackEnd)
 
-Change into the project directory:
-  cd ecommerce-app
+---
 
-Install the dependencies:
-  npm install
+## 📦 Features
 
-Start the app:
-  npm start
+### 🛍️ User Features:
+- **Responsive Modern UI/UX** built with **Tailwind CSS**, **ShadCn**, **Swiper**, and **Framer Motion**
+- Product listing with **pagination**, **search**, and **filtering**
+- **Cart Management** (add, remove, adjust quantity)
+- **Coupon & Discount Codes**
+- **Secure Checkout** via **Stripe**
+- **Authentication with Google** via **Firebase**
+- **Order Management** with statuses: shipping, processing, completed
 
-Make sure you have the necessary development environment for React Native set up before proceeding with the installation.
+---
 
-Usage
-Once the app is running, you can use it to:
+### 🛠️ Admin Dashboard:
+- **Product Management** (add, edit, delete, update)
+- **User Management** (add, edit, delete, update)
+- **Order Management** (track, process, delete)
+- **Coupon Management & Generator**
+- **Inventory Tracking**
+- **Sales & Traffic Analytics**
+  - **Charts**: Bar, Pie, Line
+  - **Revenue, Transaction, Gender Ratios**
+- **Product Performance Analysis**
 
-Browse products
-Add products to the cart
-Proceed with the checkout process
-The integration with Stripe allows for secure payment processing, ensuring a smooth and reliable e-commerce experience.
+---
 
-Contributing
-Contributions to this project are welcome! If you have any suggestions, bug reports, or feature requests, feel free to open an issue or submit a pull request on the GitHub repository.
+## ⚙️ Tech Stack
 
-Please ensure that your contributions align with the project’s coding standards and guidelines.
+### 👨‍💻 Frontend:
+- **React 18 + Vite**
+- **TypeScript**
+- **React Router DOM**
+- **Tailwind CSS** + **Tailwind Merge**
+- **ShadCn** for modular, accessible components
+- **Framer Motion** for animations
+- **Swiper.js** for carousels
+- **Chart.js + react-chartjs-2** for data visualizations
+- **React Table** for dynamic tables
+- **Firebase Auth (Google OAuth)**
+- **Stripe Payments**
+- **Redux Toolkit** & **RTK Query** for global state and API data fetching
+- **Axios** for HTTP requests
+
+---
+
+## 📊 Admin Charts Example:
+- **Sales Revenue**
+- **Transactions Overview**
+- **Gender Ratios**
+- **Product Inventory**
+- **Orders Status Pie Chart**
+
+---
+
+## 📂 Project Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
