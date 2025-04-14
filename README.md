@@ -62,7 +62,7 @@ Welcome to **E-Commerce 2025** — a modern, full-stack E-Commerce platform buil
 ---
 📸 Screenshots
 🖥️ Homepage
-<img src="https://github.com/Ahmed-Rabi3e/Advanced-To-Do-List/blob/main/public/Advannced-To-Do-List.png" align="center" width="100%"/>
+<img src="https://github.com/Ahmed-Rabi3e/E-commerce-2025-FrontEnd/blob/main/public/MacBook%20Pro-1744584376803.jpeg" align="center" width="100%"/>
 ---
 
 ## 📂 Project Setup
