@@ -59,7 +59,10 @@ Welcome to **E-Commerce 2025** — a modern, full-stack E-Commerce platform buil
 - **Gender Ratios**
 - **Product Inventory**
 - **Orders Status Pie Chart**
-
+---
+📸 Screenshots
+🖥️ Homepage
+<img src="https://github.com/Ahmed-Rabi3e/Advanced-To-Do-List/blob/main/public/Advannced-To-Do-List.png" align="center" width="100%"/>
 ---
 
 ## 📂 Project Setup
