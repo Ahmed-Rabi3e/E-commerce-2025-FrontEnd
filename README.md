@@ -60,10 +60,13 @@ Welcome to **E-Commerce 2025** — a modern, full-stack E-Commerce platform buil
 - **Product Inventory**
 - **Orders Status Pie Chart**
 ---
-📸 Screenshots
+## 📸 Screenshots<br/>
 🖥️ Homepage
+--
 <img src="https://github.com/Ahmed-Rabi3e/E-commerce-2025-FrontEnd/blob/main/public/MacBook%20Pro-1744584376803.jpeg" align="center" width="100%"/>
----
+<img src="https://github.com/Ahmed-Rabi3e/E-commerce-2025-FrontEnd/blob/main/public/MacBook%20Pro-1744584376803.jpeg" align="left" width="47%"/>
+<img src="https://github.com/Ahmed-Rabi3e/E-commerce-2025-FrontEnd/blob/main/public/iPad-1744584377071.jpeg" align="right" width="47%"/>
+
 
 ## 📂 Project Setup
 
