@@ -8,16 +8,9 @@ import { auth } from "../firebase";
 import { getUser, useLoginMutation } from "../redux/api/userAPI";
 import { userExist, userNotExist } from "../redux/reducer/userReducer";
 import { MessageResponse } from "../types/api-types";
+import type { User } from "../types/types";
 
-interface NewUserRequestBody {
-  name: string;
-  email: string;
-  photo: string;
-  gender?: string;
-  role: string;
-  dob?: string;
-  _id: string;
-}
+// New user shape is represented by `User` from types
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -31,23 +24,22 @@ const Login = () => {
       const provider = new GoogleAuthProvider();
       const { user } = await signInWithPopup(auth, provider);
 
-      const userData: Partial<NewUserRequestBody> = {
-        name: user.displayName!,
-        email: user.email!,
-        photo: user.photoURL!,
+      const userData: User = {
+        name: user.displayName ?? "",
+        email: user.email ?? "",
+        photo: user.photoURL ?? "",
         role: "user",
         _id: user.uid,
+        gender: gender || "",
+        dob: date || "",
       };
-
-      if (gender) userData.gender = gender;
-      if (date) userData.dob = date;
 
       const res = await login(userData);
 
       if ("data" in res) {
         toast.success(res.data.message);
         const data = await getUser(user.uid);
-        dispatch(userExist(data?.user!));
+        if (data && data.user) dispatch(userExist(data.user));
       } else {
         const error = res.error as FetchBaseQueryError;
         const message = (error.data as MessageResponse).message;

@@ -98,20 +98,22 @@ const Productmanagement = () => {
   return (
     <div className="admin-container">
       <AdminSidebar />
-      <main className="grid grid-cols-2 gap-2 p-10">
+      <main className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 p-6 md:p-10">
         {isLoading ? (
           <Skeleton length={20} />
         ) : (
           <>
-            <section className="flex flex-col h-fit bg-white relative px-8 py-10 shadow-xl">
+            <section className="flex flex-col h-fit bg-white relative px-4 py-6 md:px-8 md:py-10 shadow-xl">
               <strong className="mb-2">ID - {data?.product._id}</strong>
               <img
                 src={`${server}/${photo}`}
                 alt="Product"
                 loading="lazy"
-                className="w-full h-[500px] rounded"
+                className="w-full h-[300px] md:h-[500px] rounded object-cover"
               />
-              <p className="text-center font-semibold text-2xl my-2">{name}</p>
+              <p className="text-center font-semibold text-xl md:text-2xl my-2">
+                {name}
+              </p>
               {stock > 0 ? (
                 <span className="text-green-500 absolute right-0 mb-2 mr-4">
                   {stock} Available
@@ -119,12 +121,14 @@ const Productmanagement = () => {
               ) : (
                 <span className="text-red-500"> Not Available</span>
               )}
-              <h3 className="text-center font-mono text-2xl my-2">$.{price}</h3>
+              <h3 className="text-center font-mono text-xl md:text-2xl my-2">
+                $.{price}
+              </h3>
             </section>
             <article className="flex flex-col items-center relative">
               <form
                 onSubmit={submitHandler}
-                className="bg-white px-10 py-20 rounded shadow-xl"
+                className="bg-white px-6 py-8 md:px-10 md:py-20 rounded shadow-xl w-full max-w-xl"
               >
                 <h2 className="text-center font-bold my-4 text-2xl">Manage</h2>
                 <div className="flex flex-col my-2">
@@ -178,7 +182,13 @@ const Productmanagement = () => {
                   />
                 </div>
 
-                {photoUpdate && <img src={photoUpdate} alt="New Image" />}
+                {photoUpdate && (
+                  <img
+                    src={photoUpdate}
+                    alt="New Image"
+                    className="w-full max-h-48 object-contain my-2 rounded"
+                  />
+                )}
                 <button
                   type="submit"
                   className="bg-orange-500 w-full px-4 py-2 text-white rounded my-2"

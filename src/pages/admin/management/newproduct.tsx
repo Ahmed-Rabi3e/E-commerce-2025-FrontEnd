@@ -56,11 +56,11 @@ const NewProduct = () => {
   return (
     <div className="admin-container">
       <AdminSidebar />
-      <main className="flex flex-col justify-center items-center">
-        <article>
+      <main className="flex flex-col justify-center items-center p-6 md:p-10">
+        <article className="w-full flex justify-center">
           <form
             onSubmit={submitHandler}
-            className="bg-white px-10 py-20 rounded shadow-xl"
+            className="bg-white px-6 py-8 md:px-10 md:py-20 rounded shadow-xl w-full max-w-xl"
           >
             <h2 className="text-center font-bold my-4 text-2xl">New Product</h2>
             <div className="flex flex-col my-2">
@@ -71,7 +71,7 @@ const NewProduct = () => {
                 placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="p-3 outline-none bg-gray-100 rounded"
+                className="p-3 outline-none bg-gray-100 rounded w-full"
               />
             </div>
             <div className="flex flex-col my-2">
@@ -82,7 +82,7 @@ const NewProduct = () => {
                 placeholder="Price"
                 value={price}
                 onChange={(e) => setPrice(Number(e.target.value))}
-                className="p-3 outline-none bg-gray-100 rounded"
+                className="p-3 outline-none bg-gray-100 rounded w-full"
               />
             </div>
             <div className="flex flex-col my-2">
@@ -93,7 +93,7 @@ const NewProduct = () => {
                 placeholder="Stock"
                 value={stock}
                 onChange={(e) => setStock(Number(e.target.value))}
-                className="p-3 outline-none bg-gray-100 rounded"
+                className="p-3 outline-none bg-gray-100 rounded w-full"
               />
             </div>
 
@@ -105,7 +105,7 @@ const NewProduct = () => {
                 placeholder="eg. laptop, camera etc"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="p-3 outline-none bg-gray-100 rounded"
+                className="p-3 outline-none bg-gray-100 rounded w-full"
               />
             </div>
 
@@ -115,12 +115,17 @@ const NewProduct = () => {
                 required
                 type="file"
                 onChange={changeImageHandler}
-                className="p-3 outline-none bg-gray-100 rounded "
+                className="p-3 outline-none bg-gray-100 rounded w-full"
               />
             </div>
 
             {photoPrev && (
-              <img src={photoPrev} alt="New Image" loading="lazy" />
+              <img
+                src={photoPrev}
+                alt="New Image"
+                loading="lazy"
+                className="w-full max-h-48 object-contain my-2 rounded"
+              />
             )}
             <button
               type="submit"

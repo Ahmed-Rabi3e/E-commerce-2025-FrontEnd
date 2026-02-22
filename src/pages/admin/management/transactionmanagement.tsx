@@ -75,12 +75,12 @@ const TransactionManagement = () => {
   return (
     <div className="admin-container">
       <AdminSidebar />
-      <main className="grid grid-cols-2 gap-2 p-10">
+      <main className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 p-6 md:p-10">
         {isLoading ? (
           <Skeleton />
         ) : (
           <>
-            <section className="flex flex-col h-fit bg-white relative px-8 py-10 shadow-xl rounded">
+            <section className="flex flex-col h-fit bg-white relative px-4 py-6 md:px-8 md:py-10 shadow-xl rounded">
               <h2 className="text-center font-bold my-4 text-2xl">
                 Order Items
               </h2>
@@ -98,12 +98,12 @@ const TransactionManagement = () => {
               ))}
             </section>
 
-            <article className="flex flex-col h-fit bg-white px-10 py-20 rounded shadow-xl">
+            <article className="flex flex-col h-fit bg-white px-6 py-8 md:px-10 md:py-20 rounded shadow-xl">
               <h1 className="text-center font-bold my-4 text-2xl">
                 Order Info
               </h1>
               <h5 className="font-semibold my-2 text-xl">User Info</h5>
-              <div className="my-1 bg-gray-100 py-8 px-6 rounded">
+              <div className="my-1 bg-gray-100 py-4 px-4 md:py-8 md:px-6 rounded">
                 <p>Name: {name}</p>
                 <p>
                   Address:{" "}
@@ -163,16 +163,16 @@ const ProductCard = ({
   quantity,
   productId,
 }: OrderItem) => (
-  <div className="flex items-center gap-2">
+  <div className="flex items-center gap-2 flex-col sm:flex-row sm:items-center">
     <img
       src={photo}
       alt={name}
       loading="lazy"
-      className="w-16 h-16 rounded object-cover"
+      className="w-20 h-20 sm:w-16 sm:h-16 rounded object-cover"
     />
     <Link
       to={`/product/${productId}`}
-      className="font-semibold text-lg hover:text-orange-500"
+      className="font-semibold text-base sm:text-lg hover:text-orange-500"
     >
       {name}
     </Link>

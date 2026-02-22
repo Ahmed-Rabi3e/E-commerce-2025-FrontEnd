@@ -170,6 +170,7 @@ const Li = ({ url, text, location, Icon }: LiProps) => (
   >
     <Link
       to={url}
+      className="flex items-center gap-2 p-1"
       style={{
         color: location.pathname.includes(url) ? "rgb(0,115,255)" : "black",
       }}

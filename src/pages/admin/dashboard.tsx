@@ -34,7 +34,7 @@ const Dashboard = () => {
           <Skeleton length={20} />
         ) : (
           <>
-            <div className="bar">
+            <div className="bar my-2">
               <BsSearch />
               <input type="text" placeholder="Search for data, users, docs" />
               <FaRegBell />

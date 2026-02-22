@@ -45,7 +45,7 @@ const ProductDetails: React.FC = () => {
       {isLoading ? (
         <Skeleton width="80vw" />
       ) : (
-        <section className="container mx-auto h-[80vh] p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <section className="container mx-auto h-[80vh] p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-4 mb-44">
           <img
             className="w-full md:w-3/4 mx-auto aspect-square h-auto rounded-xl"
             loading="lazy"

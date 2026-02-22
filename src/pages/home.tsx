@@ -31,15 +31,8 @@ const Home = () => {
   const dispatch = useDispatch();
 
   // Media queries for responsive design
-  const isDesktop = useMediaQuery("(min-width: 1100px)");
   const isTablet = useMediaQuery("(min-width: 600px) and (max-width: 1099px)");
   const isMobile = useMediaQuery("(max-width: 599px)");
-
-  const getSlidesToShow = () => {
-    if (isDesktop) return 3;
-    if (isTablet) return 2;
-    return 1;
-  };
 
   const addToCartHandler = (cartItem: CartItem) => {
     if (cartItem.stock < 1) return toast.error("Out of Stock");
